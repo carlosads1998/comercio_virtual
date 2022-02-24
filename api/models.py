@@ -21,10 +21,10 @@ class loja(Base):
         ('EM ESTOQUE', 'EM ESTOQUE'),
         ('SEM ESTOQUE', 'SEM ESTOQUE'),
     )
-    nome =models.CharField(max_length=122)
+    nome =models.CharField(max_length=100)
     descricao= models.TextField(max_length=250)
-    tipo= models.CharField(max_length=200, choices=ST_CHOICES)
-    quant= models.CharField(max_length=200, choices=ES_CHOICES)
+    tipo= models.CharField(max_length=1, choices=ST_CHOICES, null=False, blank=False)
+    quant= models.CharField(max_length=1, choices=ES_CHOICES,  null=False, blank=False)
     valor = models.DecimalField(decimal_places=2, max_digits=20)
     imagem = models.ImageField(upload_to=upload_image_jogos, blank=True, null=True)
     
