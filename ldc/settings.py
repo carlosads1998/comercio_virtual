@@ -26,7 +26,7 @@ SECRET_KEY = '&on0#gonu&jr7-y@042mfmu94i6j#k6o$!9o5q7uy)i!@+*=x_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://comercio-ldc.herokuapp.com/']
+ALLOWED_HOSTS = ['comercio-ldc.herokuapp.com']
 
 
 # Application definition
