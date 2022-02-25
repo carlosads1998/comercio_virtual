@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from .models import loja
-from .serializers import lojaSerializer
+from .models import loja, estoque
+from .serializers import lojaSerializer, estoqueSerializer
 from rest_framework import generics
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.permissions import IsAuthenticated
@@ -20,6 +20,18 @@ class lojasAPIView(generics.RetrieveUpdateDestroyAPIView):
     serializer_class= lojaSerializer
     filter_backends = [DjangoFilterBackend]
     filter_fields = ['nome']
+    
+    
+class estoqueAPIView(generics.ListCreateAPIView):
+    queryset= estoque.objects.all()
+    serializer_class=estoqueSerializer
+    filter_backends= [DjangoFilterBackend]
+    filter_fields = ['vendedor']
+    
+class estoquesAPIView(generics.RetrieveUpdateDestroyAPIView):
+    queryset= estoque.objects.all()
+    filter_backends=[DjangoFilterBackend]
+    filter_fields = ['vendedor']
     
 #class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
 #    @classmethod

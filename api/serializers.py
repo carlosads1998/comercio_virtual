@@ -1,5 +1,6 @@
+from pyexpat import model
 from rest_framework import serializers
-from .models import loja
+from .models import loja, estoque
 
 class lojaSerializer(serializers.ModelSerializer):
     class Meta:
@@ -8,8 +9,14 @@ class lojaSerializer(serializers.ModelSerializer):
             'id',
             'nome',
             'descricao',
-           # 'tipo',
-            #'quant',
             'valor',
             'imagem',
+        )
+
+class estoqueSerializer(serializers.ModelSerializer):
+    class Meta:
+        model= estoque
+        fields = (
+            'vendedor',
+            'venda',
         )
