@@ -13,7 +13,7 @@ class Base(models.Model):
     
 class loja(Base):
     ST_CHOICES =(
-       ( 'AÇÃO', 'AÇÃO'),
+       ('AÇÃO', 'AÇÃO'),
         ('ESPORTES', 'ESPORTES'),
         ('RPG', 'RPG'),
     )
