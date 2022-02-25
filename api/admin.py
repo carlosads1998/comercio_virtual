@@ -3,4 +3,4 @@ from .models import loja
 
 @admin.register(loja)
 class lojaAdmin(admin.ModelAdmin):
-    list_display= ('nome', 'descricao', 'tipo', 'quant', 'valor', 'imagem')
+    list_display= ('nome', 'descricao', 'valor', 'imagem')

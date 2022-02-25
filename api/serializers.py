@@ -8,8 +8,8 @@ class lojaSerializer(serializers.ModelSerializer):
             'id',
             'nome',
             'descricao',
-            'tipo',
-            'quant',
+           # 'tipo',
+            #'quant',
             'valor',
             'imagem',
         )
